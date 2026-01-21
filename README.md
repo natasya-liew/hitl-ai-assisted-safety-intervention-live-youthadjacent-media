@@ -100,28 +100,35 @@ The prototype is intentionally minimal and exists to illustrate system behavior,
 
 ## Repository Structure
 
-ai-assisted-safety-intervention/
+hitl-ai-assisted-safety-intervention-live-youthadjacent-media/
 ├── README.md
+├── LICENSE
 ├── docs/
-│ ├── PRD.md
-│ ├── DecisionMemo.md
-│ ├── EthicsAndSafety.md
-│ └── Glossary.md
+│   ├── PRD.md
+│   ├── DecisionMemo.md
+│   ├── EthicsAndSafety.md
+│   └── Glossary.md
 ├── diagrams/
-│ ├── 01_safety_funnel_overview.png
-│ ├── 02_risk_signal_taxonomy.png
-│ ├── 03_trend_discovery_graph.png
-│ └── 04_human_in_loop_workflow.png
+│   ├── 01_safety_funnel_overview.png
+│   ├── 02_risk_signal_taxonomy.png
+│   ├── 03_trend_discovery_graph.png
+│   └── 04_human_in_loop_workflow.png
 ├── prototype/
-│ ├── README.md
-│ ├── simulate_sessions.py
-│ ├── risk_scoring.py
-│ ├── routing_logic.py
-│ └── sample_output/
-├── data/
-│ ├── synthetic_sessions.json
-│ └── synthetic_signals.json
-└── LICENSE
+│   ├── README.md
+│   ├── simulate_sessions.py
+│   ├── risk_scoring.py
+│   ├── routing_logic.py
+│   └── sample_output/
+│       └── risk_routing_example.json
+└── data/
+    ├── synthetic_sessions.csv
+    ├── synthetic_sessions.json
+    ├── synthetic_events.csv
+    ├── synthetic_events.json
+    ├── DATA_README.md
+    ├── SCHEMA.md
+    └── EDGE_CASE_SCENARIOS.md
+
 
 ---
 
