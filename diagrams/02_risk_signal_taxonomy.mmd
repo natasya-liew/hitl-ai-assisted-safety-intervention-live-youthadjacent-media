@@ -1,0 +1,19 @@
+flowchart LR
+  subgraph Inputs["Signals & Context Inputs"]
+    S1["Content-level Signals (synthetic model outputs)<br/>text, audio, visual"]
+    S2["Behavioral Signals<br/>interaction rate, velocity, cross-age interaction proxy"]
+    S3["Session Metadata<br/>format, category, duration, time-of-day"]
+    S4["Audience Composition (aggregated)<br/>age-band shares, shifts over time"]
+    S5["Trend & Novelty Signals<br/>cluster id, novelty score, burst indicators"]
+    S6["Account Metadata (coarse)<br/>age band, tenure, region (optional)"]
+  end
+
+  subgraph Exclusions["Explicit Exclusions"]
+    X1["No intent inference"]
+    X2["No psychological diagnosis"]
+    X3["No private message content required"]
+    X4["No irreversible automated enforcement"]
+  end
+
+  Inputs --> O["Risk Indicator Set<br/>(combined, time-aware)"]
+  Exclusions -.-> O

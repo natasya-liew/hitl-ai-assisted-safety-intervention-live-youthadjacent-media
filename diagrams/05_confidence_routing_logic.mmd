@@ -1,0 +1,20 @@
+flowchart TD
+  A[Inputs: risk tier + confidence band] --> B{Risk Tier}
+  
+  B -- Low --> L[Action: none<br/>Reversible]
+  
+  B -- Medium --> M{Confidence}
+  M -- High/Med --> MF[Action: friction<br/>Reversible]
+  M -- Low --> MR[Action: human review<br/>Abstain under uncertainty]
+  
+  B -- High --> H{Confidence}
+  H -- High --> HL[Action: limit<br/>Reversible in prototype<br/>Policy sign-off flag]
+  H -- Med/Low --> HR[Action: human review<br/>HITL required]
+  
+  MR --> X[Moderator decision + audit]
+  HR --> X
+  HL --> X
+  MF --> X
+  L --> X
+
+  X --> Y[Outcome monitoring<br/>reports, violations, appeals]

@@ -1,0 +1,18 @@
+flowchart LR
+  A[Case surfaced to Moderator Queue] --> B[Moderator Context Panel]
+  B --> C[What Moderator Sees]
+  C --> C1["Signal summary (not raw outputs)"]
+  C --> C2["Confidence band + rationale"]
+  C --> C3["Recent session timeline (LIVE)"]
+  C --> C4["Relevant aggregates (history, audience shifts)"]
+
+  B --> D{Moderator Decision}
+  D -- Approve --> E["Apply recommended action<br/>prompt/friction/limit"]
+  D -- Override --> F["Choose alternative action<br/>or lower severity"]
+  D -- No Action --> G[Dismiss / monitor]
+
+  E --> H[Audit Log]
+  F --> H
+  G --> H
+  H --> I["Feedback Capture<br/>structured reason codes"]
+  I --> J["Offline review loop<br/>policy + ops + product"]

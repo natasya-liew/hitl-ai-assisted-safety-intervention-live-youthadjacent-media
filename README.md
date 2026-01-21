@@ -113,7 +113,8 @@ hitl-ai-assisted-safety-intervention-live-youthadjacent-media/
 │   ├── 01_safety_funnel_overview.png
 │   ├── 02_risk_signal_taxonomy.png
 │   ├── 03_trend_discovery_graph.png
-│   └── 04_human_in_loop_workflow.png
+│   ├── 04_human_in_loop_workflow.png
+│   └── 05_confidence_routing_logic.png
 ├── prototype/
 │   ├── README.md
 │   ├── simulate_sessions.py
@@ -132,6 +133,26 @@ hitl-ai-assisted-safety-intervention-live-youthadjacent-media/
 ```
 
 ---
+
+## Diagrams
+
+The diagrams below illustrate the core components of the system at increasing levels of detail. Together, they cover end-to-end flow, signal inputs, emerging risk detection, decision logic under uncertainty, and human-in-the-loop governance.
+
+1. **Safety Funnel Overview** (`01_safety_funnel_overview.png`)  
+   End-to-end pre-harm safety funnel, including multimodal signal ingestion, context enrichment, confidence-weighted risk tiering, routing, and escalation to human review.
+
+2. **Risk Signal Taxonomy** (`02_risk_signal_taxonomy.png`)  
+   Taxonomy of multimodal signals and contextual inputs (text, audio, visual, behavioral, audience composition, session metadata), including what is explicitly excluded (e.g., intent inference).
+
+3. **Trend Discovery & Risk Velocity** (`03_trend_discovery_graph.png`)  
+   Illustration of emerging risk detection over time, including novelty, clustering, and escalation velocity across LIVE sessions.
+
+4. **Human-in-the-Loop Workflow** (`04_human_in_loop_workflow.png`)  
+   Moderator decision support flow, including surfaced context, override paths, reversibility, and audit logging.
+
+5. **Confidence & Routing Logic** *(`05_confidence_routing_logic.png`)*  
+   Conceptual view of how risk tier, confidence bands, and abstention interact to determine routing outcomes (e.g., no action, friction, limitation, or human review).  
+   *This logic is represented within the end-to-end funnel and prototype code; a standalone diagram may be added for clarity.*
 
 ## Status
 This is an evolving design exercise and will be updated as assumptions, tradeoffs, and safety considerations are refined.

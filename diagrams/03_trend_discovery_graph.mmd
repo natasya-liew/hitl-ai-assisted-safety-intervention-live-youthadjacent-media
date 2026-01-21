@@ -1,0 +1,9 @@
+flowchart TD
+  A[Sessions over time] --> B[Embed/Represent Signals<br/>text/audio/visual/behavior + metadata]
+  B --> C[Cluster Similar Patterns<br/>trend clusters]
+  C --> D[Novelty & Burst Detection<br/>new patterns + sudden growth]
+  D --> E[Candidate Emerging Trend]
+  E --> F{Risk Impact Assessment}
+  F -- Low/uncertain --> G[Track & Monitor<br/>no intervention]
+  F -- Medium/high --> H[Surface as Context Signal<br/>for risk scoring + routing]
+  H --> I[Supports early detection<br/>without over-intervention]

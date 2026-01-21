@@ -1,0 +1,14 @@
+flowchart TD
+  A[Content Created<br/>LIVE session or short-form upload] --> B[Signal Ingestion<br/>AI-assisted extraction of text/audio/visual/behavioral signals]
+  B --> C[Context Enrichment<br/>session metadata, audience mix, history, trend signals]
+  C --> D[Risk & Confidence Assessment<br/>risk tier + confidence band]
+  D --> E{"Abstain? (low confidence<br/>with non-trivial risk)"}
+  E -- Yes --> F[Route to Human Review<br/>HITL decision required]
+  E -- No --> G[Intervention Routing<br/>graduated + reversible actions]
+  G --> H[Action Tier<br/>none / prompt / friction / limit]
+  F --> I[Moderator Decision<br/>approve / override / no-action]
+  I --> H
+  H --> J[Audit Logging<br/>signals, rationale, overrides, outcomes]
+  J --> K[Outcome Signals<br/>reports, downstream violations, appeals]
+  K --> L["Feedback & Iteration (Offline)<br/>threshold tuning + drift checks + bias review"]
+  L --> C
