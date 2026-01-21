@@ -100,6 +100,7 @@ The prototype is intentionally minimal and exists to illustrate system behavior,
 
 ## Repository Structure
 
+```text
 hitl-ai-assisted-safety-intervention-live-youthadjacent-media/
 ├── README.md
 ├── LICENSE
@@ -128,7 +129,7 @@ hitl-ai-assisted-safety-intervention-live-youthadjacent-media/
     ├── DATA_README.md
     ├── SCHEMA.md
     └── EDGE_CASE_SCENARIOS.md
-
+```
 
 ---
 
